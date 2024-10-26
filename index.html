@@ -2,9 +2,31 @@
 <html lang="en">
   <head>
     <script src="app.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Superhero Search</title>
   </head>
-  <body>
-    <h1>Avengers Character Search</h1>
-    <button id="btn">Search</button>
+  <body class="body">
+    <div>
+      <header class="header"></header>
+      <br />
+      <hr class="divider hr" />
+      <h1 class="h1">Search for hero by Superhero name or Alter Ego</h1>
+      <br />
+      <div class="container">
+        <input
+          class="input-container"
+          type="text"
+          id="search"
+          placeholder="Enter name or alias"
+        />
+      </div>
+      <br />
+      <div class="container">
+        <button id="btn">Search</button>
+      </div>
+      <h2 class="h2">Result</h2>
+      <hr class="divider hr" />
+      <div class="container2" id="results"></div>
+    </div>
   </body>
 </html>

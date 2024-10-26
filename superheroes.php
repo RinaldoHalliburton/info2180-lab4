@@ -63,6 +63,32 @@ $superheroes = [
   ], 
 ];
 
+// Getting the value from the query.
+if (isset($_GET['query'])){
+    $search=$_GET['query'];
+}else{
+    $search="";
+}
+
+//Sanitizing the input field.
+$search= htmlspecialchars(strip_tags($search));
+if ($search!=""){
+    //Searching through the array.
+    foreach($superheroes as $superhero){
+        if(strcasecmp($search,$superhero["name"])===0|| strcasecmp($search,$superhero["alias"] )===0){
+            echo '<h3>'.$superhero["alias"].'<h3>';
+            echo '<h4>'.$superhero["name"].'<h4>';
+            echo '<p>'.$superhero["biography"].'</p>';
+            exit();//Prevents any further work to be done.
+        }
+        
+        }
+        //If a superhero is not found
+        echo '<h2>'."Superhero not found".'<h2>';
+        exit();
+
+    }
+
 ?>
 
 <ul>

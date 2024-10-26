@@ -1,0 +1,127 @@
+/* Overall layout */
+
+/*Body class*/
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically if needed */
+    color: hsl(253, 100%, 47%);
+}
+
+.container2 {  /*Container for results div*/
+   
+    color: rgb(188, 24, 24);
+    text-align: center;
+    vertical-align: middle;
+    font-family: "Comic Sans MS", "Comic Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+
+/* Header section */
+header {
+    font-family: "Chalkduster", "Comic Sans MS", cursive, sans-serif;
+    color: rgb(232, 228, 5);
+    padding: 60px;
+    text-align: center;
+    margin: 0%;
+    background-image: url("pic.png");
+    background-size: 22%; /* Adjusts the size to 80% of the header's width */
+    background-repeat: no-repeat; /* Ensures the image doesn't repeat */
+    background-position: center; /* Centers the image */
+}
+
+
+/*Customize hr element*/
+.divider {
+    display: flex;
+    
+    &:before,
+    &:after {
+      content: "";
+      flex: 1;
+    }
+  }
+
+.hr {
+    overflow: hidden;
+    align-items: center;
+    background: hsl(253, 100%, 47%);
+    color: rgb(188, 24, 24);
+    height: 10px;
+    line-height: 2em;
+    border: none;
+    margin: auto;
+    width: 65%;
+
+      
+    &:before,
+    &:after {
+      background: rgb(228, 7, 7);
+      padding: 50px 0;
+      height: 0;
+      transform: rotate(45deg);
+    }
+  }
+
+
+/*Headings*/
+h1 {
+    font-family: "Comic Sans MS", "Comic Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    font-size: 30px;
+    text-align: center;
+    color: hsl(253, 100%, 47%);
+    margin: 2;
+}
+
+h2 {
+    font-size: 30px;
+    font-family: "Comic Sans MS", "Comic Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    text-align: center;
+    color: hsl(253, 100%, 47%);
+}
+
+
+
+/*Text field*/
+input{
+    width: 20%;
+    padding: 9px;
+    border: 5px solid rgb(228, 7, 7);
+    font-family: "Comic Sans MS", "Comic Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; 
+}
+
+
+
+div{
+    font-size: 15px;
+    padding: 3px;
+}
+
+button {
+    background-color: rgb(228, 7, 7); /*  button color */
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: auto;
+}
+
+/*Style returned results*/
+#results {
+    margin-top: 20px;
+}
+
+#results ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0; /* Ensures no padding */
+    margin: 0; /* Ensures no margin */
+}
+
+#results li {
+    margin-bottom: 10px;
+    font-family: "Comic Sans MS", "Comic Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
